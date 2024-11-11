@@ -12,6 +12,8 @@ using namespace cop4530;
 void PrintMenu();
 
 int main() {
+    cout<<"Testing GitHub Interaction.\n";
+
     PassServer PWS(19);
     PrintMenu();
     char choice;

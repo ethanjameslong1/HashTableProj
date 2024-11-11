@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/ethan/CLionProjects/HashTable/cmake-build-debug",
-		"source" : "C:/Users/ethan/CLionProjects/HashTable"
+		"build" : "C:/Users/ethan/Documents/GitHub/HashTableProj/cmake-build-debug",
+		"source" : "C:/Users/ethan/Documents/GitHub/HashTableProj"
 	},
 	"version" : 
 	{
