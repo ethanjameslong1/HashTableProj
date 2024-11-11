@@ -13,6 +13,7 @@ void PrintMenu();
 
 int main() {
     cout<<"Testing GitHub Interaction.\n";
+    cout<<"Testing GitHub Interaction again.\n";
 
     PassServer PWS(19);
     PrintMenu();
