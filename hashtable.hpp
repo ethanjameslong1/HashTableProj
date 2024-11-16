@@ -94,7 +94,7 @@ template <typename K, typename V>
 bool HashTable<K,V>::insert(const pair<K,V> & KVpair)
 {
   if (match(KVpair)) return false;
-  int listIndex = myHash(KVpair.first);
+  int listIndex = myhash(KVpair.first);
   bucketsVector[listIndex].push_back(KVpair);
   size++;
   if (size>=capacity) rehash();
@@ -137,7 +137,7 @@ void HashTable<K,V>::rehash()
     typename list<pair<K,V>>::iterator it = bucketsVector[i].begin();
     for (int j=0; j < bucketsVector[i].size(); j++)
     {
-      new_bucketsVector[myhash(*it.first)].push_back(*it);
+      new_bucketsVector[myhash((*it).first)].push_back(*it);
       ++it;
     }
   }
