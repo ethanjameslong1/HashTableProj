@@ -21,16 +21,18 @@ namespace cop4530 {
     // the default_capacity is used if the initial capacity
     // of the underlying vector of the hash table is zero.
     static const unsigned int default_capacity = 11;
+
+
 template <typename K,typename V>
 class HashTable {
     typedef vector<list<pair<K,V>>> VLP;
-
+friend class PassServer;
 public:
     unsigned long prime_below(unsigned long n);
 
     void setPrimes(std::vector<unsigned long> &vprimes);
 
-    HashTable(size_t size);
+    HashTable(size_t hashCapacity);
     HashTable();
     inline ~HashTable() { clear(); }
     bool contains(const K & Key);
@@ -39,11 +41,10 @@ public:
     bool insert(pair<K,V> && KVpair);
     bool remove(const K & key);
     void clear();
-    string getpassword(const string & s);
+    string getValue(const string & s);
     bool load(const char*filename);
     void dump();
     bool write(string filename);
-    size_t size;
 
 private:
     void makeEmpty();
@@ -52,6 +53,9 @@ private:
 
     VLP bucketsVector;
     size_t capacity;
+protected:
+    size_t size;
+
 };
 
 

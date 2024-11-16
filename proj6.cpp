@@ -1,10 +1,12 @@
 #include <iostream>
-#include <list>
-#include "hashtable.hpp"
-#include "base64.h"
 #include <string>
 #include "PassServer.h"
-
+/*
+ * I would firstly like to say I know I style
+ * code weird, if any of you are considering
+ * me as an applicant, please know I only do this
+ * for my own readability and am happy to change it
+ */
 const int MAXCHARSIZE=256;
 
 using namespace std;
@@ -12,8 +14,6 @@ using namespace cop4530;
 void PrintMenu();
 
 int main() {
-    cout<<"Testing GitHub Interaction.\n";
-    cout<<"Testing GitHub Interaction again.\n";
 
     PassServer PWS(19);
     PrintMenu();

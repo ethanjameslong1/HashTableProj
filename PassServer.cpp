@@ -52,7 +52,7 @@ size_t PassServer::size()
 string PassServer::decodepw(string & s)
 {
     string str;
-    str = passServer.getpassword(s);
+    str = passServer.getValue(s);
     return decode(str);
 }
 
